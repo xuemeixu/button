@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	background-color: #333131;
+}
+/* 定义整体这个大盒子的高和宽 */
+.content{
+	width: 800px;
+	height: 280px;	
+	margin: 50px auto;
+	position: relative;
+}
+/* 定义这个小盒子的高和宽 */
+.content .link{
+	float: left;
+	width: 205px;
+	height: 280px;
+	margin: 0 20px;	
+}
+/* 定义图片的显示和图片所占比例
+ */.link .icon{
+	display: inline-block;/*  因为span是一个内联元素，宽和高都是不显示的，所以要把它转成一个块状元素 */
+	width: 100%;
+	height: 190px;
+	transition:0.2s ease-out;   /* 定义图片的渐变 */
+	-moz-transition: 0.2s ease-out; /* Firefox 4 */
+    -webkit-transition: 0.2s ease-out; /* Safari 和 Chrome */
+     -o-transition: 0.2s ease-out; /* Opera */
+}
+.link-mission .icon{
+	background:url("images/mission.png") no-repeat center center;
+} 
+.link-play .icon{
+	background:url("images/play.png")no-repeat center center;
+} 
+.link-touch .icon{
+	background:url("images/touch.png")no-repeat center center ;
+} 
+.link .icon:hover{
+			transform:rotate(360deg) scale(1.2);/* 旋转360度，变大1.2倍 */
+
+}
+/* a{
+	text-decoration: none;
+} */
+.button{
+	display: block;
+	width: 180px;
+	height: 50px;
+	text-decoration: none;
+	margin-left: 10px;
+	color: #2DCB70;
+	padding-left: 20px;
+	position: relative;
+	padding-top: 10px;
+	font-family: Arial; /* 给按钮的汉字加粗 */
+    border-style: solid;
+	border: 2px solid rgba(255,255,255,0.8);
+	box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+
+
+    background: url("images/allow.png") no-repeat 130px center;
+    transition:0.4s ease; /* ease先慢再快再慢 */
+}
+.button:hover{
+	border: 2px solid rgba(255,255,255,1);
+	background: url("images/allow.png") no-repeat 140px center;
+}
+/* 定义线条显示 */
+.button .line{
+	display: block;
+	position: absolute;
+	background: none;
+	transition:0.4s ease;
+}
+.button:hover .line{
+	background: #FAF4F6;
+}
+
+.button .line-top{
+	width: 0px;
+	height: 2px;
+	top:-2px;
+	left: -110%;
+}
+.button:hover .line-top{
+	width: 100%;
+	left: -2px;
+}
+
+.button .line-right{
+	width: 2px;
+	height: 0px;
+	right:-2px; 
+	top: -110%;
+}
+.button:hover .line-right{
+	height: 100%;
+	top: -2px;
+}
+
+.button .line-bottom{
+	width: 0px;
+	height: 2px;
+	bottom:-2px; 
+	right: -110%;
+}
+.button:hover .line-bottom{
+	width: 100%;
+	right: -2px;
+}
+
+.button .line-left{
+	width: 2px;
+	height: 0px;
+	left:-2px; 
+	bottom: -110%;
+}
+.button:hover .line-left{
+	height: 100%;
+	bottom: -2px;
+}
+ .tip{
+	position: absolute;
+	padding:0 14px;
+	height: 35px;
+	line-height: 35px;
+	background: #2DCB70;
+	color: #fff;
+	font-size: 18px;
+	margin:0 auto;
+	border-radius: 3px;
+	top: 110px;
+	opacity: 1;
+	width: 130px;
+	transition:0.4s ease;
+}
+
+.tip em{
+	font-style: normal;
+}
+.tip span{
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 7px solid transparent;
+	border-top-color: #2DCB70;
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	margin-left: -3.5px;
+
+}
+.button:hover .tip{
+	top: 130px;
+	opacity: 1;
+} 
